@@ -1,15 +1,23 @@
 {
   "name": "cataliz-assesments",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run-1": "node assesment-1/index.js",
-    "run-2": "node assesment-2/index.js",
-    "run-3": "node assesment-3/index.js"
+    "move-disk": "node assesment-1/index.js",
+    "rev-geo": "node assesment-2/index.js",
+    "crud": "node assesment-3/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khoirul-Anam21/cataliz-assesments-anam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Khoirul-Anam21/cataliz-assesments-anam/issues"
+  },
+  "homepage": "https://github.com/Khoirul-Anam21/cataliz-assesments-anam#readme",
+  "description": ""
 }
