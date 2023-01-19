@@ -1,0 +1,42 @@
+[
+    {
+        "id": "099",
+        "name": "Mohammad Khoirul",
+        "age": 99,
+        "address": "Pamekasan, East Java",
+        "sex-type": "male",
+        "married": false
+    },
+    {
+        "id": "077",
+        "name": "Khoirul",
+        "age": 19,
+        "address": "Probolinggo, East Java",
+        "sex-type": "male",
+        "married": true
+    },
+    {
+        "id": "009",
+        "name": "Anam",
+        "age": 89,
+        "address": "Malang, East Java",
+        "sex-type": "female",
+        "married": false
+    },
+    {
+        "id": "008",
+        "name": "Samsul",
+        "age": 40,
+        "address": "Surakarta, Central Java",
+        "sex-type": "male",
+        "married": true
+    },
+    {
+        "id": "069",
+        "name": "Bambang",
+        "age": 42,
+        "address": "Surabaya, East Java",
+        "sex-type": "male",
+        "married": false
+    }
+]
