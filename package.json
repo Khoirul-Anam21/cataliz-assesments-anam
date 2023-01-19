@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "move-disk": "node assesment-1/index.js",
+    "move-disk": "assesment-1/index.js",
     "rev-geo": "node assesment-2/index.js",
-    "crud": "node assesment-3/index.js"
+    "crud": "ts-node assesment-3/index.ts",
+    "ts-crud": "tsc --outDir out"  
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "url": "https://github.com/Khoirul-Anam21/cataliz-assesments-anam/issues"
   },
   "homepage": "https://github.com/Khoirul-Anam21/cataliz-assesments-anam#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
 }

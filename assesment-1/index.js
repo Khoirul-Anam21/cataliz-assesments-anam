@@ -1,6 +1,6 @@
 /*
  *  - urutan angka mewakili disk
- *  - angka kecil mewakili disk paling atas / kecil
+ *  - angka kecil mewakili disk paling atas / kecil dan sebaliknya
  *  - angka kecil tidak boleh di belakang angka besar
  *  - Hitung berapa kali step sampai array batang 3 terisi 3, 2, 1
  */
@@ -12,6 +12,8 @@ const batang2 = [];
 const batang3 = [];
 let iterator = 1;
 let step = 0;
+
+
 
 function howManySteps(batang) {
     moveDisk(batang, batang3);
