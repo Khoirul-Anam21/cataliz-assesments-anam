@@ -1,15 +1,25 @@
 import express, { Express, Request, Response, Router } from 'express';
-import dotenv from 'dotenv';
-import { generatePersonRoutes} from './routes/person_routes';
-
-dotenv.config();
+import { generatePersonRoutes } from './routes/person_routes';
+import PersonRepositoryInterface, { PersonRepository } from './repositories/person_repo';
+import PersonServiceInterface, { PersonService } from './services/person_service';
+import PersonControllerInterface, { PersonController } from './controllers/person_controller';
 
 const app: Express = express();
-const port = process.env.PORT;
+const port = 8000;
 
-// generatePersonRoutes(app, Router, _);
+const personRepo: PersonRepositoryInterface = new PersonRepository("tes");
+const personService: PersonServiceInterface = new PersonService(personRepo);
+const personController: PersonControllerInterface = new PersonController(personService);
 
-app.listen(port, ()=>{console.log(`Server berjalan pada http://localhost:${port}`);
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+
+generatePersonRoutes(app, personController);
+
+app.listen(port, () => {
+    console.log(`Server berjalan pada http://localhost:${port}`);
 })
 
 
