@@ -1,26 +1,18 @@
 [
     {
-        "id": "099",
-        "name": "Mohammad Khoirul",
-        "age": 99,
-        "address": "Pamekasan, East Java",
-        "sex-type": "male",
-        "married": false
-    },
-    {
-        "id": "077",
-        "name": "Khoirul",
-        "age": 19,
-        "address": "Probolinggo, East Java",
-        "sex-type": "male",
-        "married": true
+        "name": "KSOSKAND",
+        "age": 55,
+        "address": "Bogor, West Java",
+        "sexType": "female",
+        "married": true,
+        "id": "077"
     },
     {
         "id": "009",
         "name": "Anam",
         "age": 89,
         "address": "Malang, East Java",
-        "sex-type": "female",
+        "sexType": "female",
         "married": false
     },
     {
@@ -28,7 +20,7 @@
         "name": "Samsul",
         "age": 40,
         "address": "Surakarta, Central Java",
-        "sex-type": "male",
+        "sexType": "male",
         "married": true
     },
     {
@@ -36,7 +28,63 @@
         "name": "Bambang",
         "age": 42,
         "address": "Surabaya, East Java",
-        "sex-type": "male",
+        "sexType": "male",
         "married": false
+    },
+    {
+        "name": "baru",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "0undefined6"
+    },
+    {
+        "name": "baru",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "025"
+    },
+    {
+        "name": "baru",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "076"
+    },
+    {
+        "name": "baru",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "022"
+    },
+    {
+        "name": "baru",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "0undefined6"
+    },
+    {
+        "name": "XSOKXNSONXKS",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "053"
+    },
+    {
+        "name": "XSOKXNSONXKS",
+        "age": 99,
+        "address": "Batu, East Java",
+        "sexType": "male",
+        "married": false,
+        "id": "063"
     }
 ]

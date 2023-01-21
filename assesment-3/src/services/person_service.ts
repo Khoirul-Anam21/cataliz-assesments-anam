@@ -1,29 +1,62 @@
+import { Person } from "../models/person_model";
+import PersonRepositoryInterface from "../repositories/person_repo";
 import PersonRepository from "../repositories/person_repo";
 
 export default interface PersonServiceInterface{
-    addNewPersonToData(): void;
-    getPeopleData(): void;
-    updatePersonById(): void;
-    deletePersonById(): void;
+    addNewPersonToData(person: Person): Person;
+    getPeopleData(): Person[];
+    updatePersonById(id: string, personObj: Person): Person;
+    deletePersonById(id: string): string;
 }
 
-export class PersonService implements PersonServiceInterface {
+export function injectPersonService(repo: PersonRepositoryInterface): PersonServiceInterface {
+    return new PersonService(repo);
+}
+
+class PersonService implements PersonServiceInterface {
     
     private pRepository : PersonRepository;
     
     constructor(pRepository: PersonRepository) {
         this.pRepository = pRepository;
     }
-    addNewPersonToData(): void {
-        throw new Error("Method not implemented.");
+
+    public addNewPersonToData = (person: Person): Person => {
+        try {
+            const addedPerson = this.pRepository.insertNewPerson(person);
+            return addedPerson;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
     }
-    getPeopleData(): void {
-        throw new Error("Method not implemented.");
+    public getPeopleData = (): Person[] => {
+        try {
+            const people: Person[] = this.pRepository.selectAllPerson();
+            return people;
+        } catch (error) {
+            throw error;
+        }
     }
-    updatePersonById(): void {
-        throw new Error("Method not implemented.");
+    public updatePersonById = (id: string, personObj: Person): Person => {
+        try {
+            const updatedInfo: string = this.pRepository.updateSelectedPerson(id, personObj);
+            if (updatedInfo !== "success") {
+                throw updatedInfo;
+            }
+            const updatedPerson: Person = this.pRepository.selectAllPerson().filter(person=> person.id === id)[0];
+            return updatedPerson;
+        } catch (error) {
+            throw error;
+        }
     }
-    deletePersonById(): void {
-        throw new Error("Method not implemented.");
+    
+    public deletePersonById = (id: string): string => {
+        try {
+            const dbResponse: string = this.pRepository.DeleteSelectedPerson(id);
+            return dbResponse;
+        } catch (error) {
+            throw error;
+        }
     }
 }
