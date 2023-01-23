@@ -16,7 +16,6 @@ async function main() {
         displayLocalMap();
         const input = prompt("Ingin menambah data map? (n: abort, other key: yes) ");
 
-        if (!input === "n") continue;
         if (input === "n") break; 
 
         const lat = prompt("Masukkan latitude: ");
