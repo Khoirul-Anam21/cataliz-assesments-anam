@@ -9,8 +9,8 @@
     {
         "formatted_address": "646 Grose Vale Rd, Grose Vale NSW 2753, Australia",
         "location": {
-            "lat": -33.5784836,
-            "lng": 150.6656893
+            "lat": -33,
+            "lng": 150
           }
     },
     {
@@ -23,8 +23,8 @@
     {
         "formatted_address": "5 Walkley Pl, McKellar ACT 2617, Australia",
         "location": {
-            "lat": -35.2135537,
-            "lng": 149.0851182
+            "lat": -35,
+            "lng": 149
           }
     }
 ]

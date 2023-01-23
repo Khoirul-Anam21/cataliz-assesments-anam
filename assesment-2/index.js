@@ -13,15 +13,29 @@ const path = require('path');
 
 async function main() {
     while (true) {
+        displayLocalMap();
+        const input = prompt("Ingin menambah data map? (n: abort, other key: yes) ");
+
+        if (!input === "n") continue;
+        if (input === "n") break; 
+
         const lat = prompt("Masukkan latitude: ");
         const long = prompt("Masukkan longitude: ");
         const location = await getLocationFromLatLong(lat, long)
         writeMapToLocal(location);
-        const tes = prompt("stop? ")
-        if (tes === "n") {
+        const tes = prompt("stop? y/Y (other key for not stop)")
+        if (tes === "y" || tes === "Y") {
             break;
         }
     }
+}
+
+function displayLocalMap() {
+    const localMapFile = fs.readFileSync(path.resolve(__dirname, "address_local_map.json"), "utf-8");
+    const localMapData = JSON.parse(localMapFile);
+    console.log("Daftar alamat yang sudah di request dan siap sebagai absensi: ");
+    const addresses = localMapData.map(val => val.formatted_address)
+    console.log(addresses);
 }
 
 async function getLocationFromLatLong(lat, long) {
@@ -38,6 +52,7 @@ async function getLocationFromLatLong(lat, long) {
 
 function writeMapToLocal(newLocation) {
     try {
+        if (newLocation === undefined ) throw "Error: bad request on lat & ing";
         const localMapFile = fs.readFileSync(path.resolve(__dirname, "address_local_map.json"), "utf-8");
         const localMapData = JSON.parse(localMapFile);        
         localMapData.push(newLocation);

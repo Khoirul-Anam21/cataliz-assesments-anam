@@ -8,7 +8,7 @@ import { handleError } from './error';
 const app: Express = express();
 const port = 8000;
 
-const personRepo: PersonRepositoryInterface = injectPersonRepo("./db/mock-db.json")
+const personRepo: PersonRepositoryInterface = injectPersonRepo("./mock-db.json")
 const personService: PersonServiceInterface = injectPersonService(personRepo);
 const personController: PersonControllerInterface = injectPersonController(personService);
 

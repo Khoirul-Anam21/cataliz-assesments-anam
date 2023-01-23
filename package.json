@@ -4,10 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "move-disk": "assesment-1/index.js",
+    "move-disk": "node assesment-1/index.js",
     "rev-geo": "node assesment-2/index.js",
-    "crud": "ts-node assesment-3/index.ts",
-    "ts-crud": "tsc --outDir out"
+    "crud": "ts-node assesment-3/src/index.ts"
   },
   "keywords": [],
   "author": "",

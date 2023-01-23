@@ -1,3 +1,4 @@
+import path from "path";
 import { Person } from "../models/person_model";
 import fs from 'fs';
 
@@ -18,7 +19,7 @@ class PersonRepository implements PersonRepositoryInterface {
 
     constructor(db: string) {
         this.db = db;
-        const file = fs.readFileSync(db, "utf-8");
+        const file = fs.readFileSync(path.resolve(__dirname, db), "utf-8");
         this.peopleData = JSON.parse(file)
     }
 
